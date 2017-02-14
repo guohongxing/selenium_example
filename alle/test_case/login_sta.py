@@ -4,8 +4,9 @@ reload(sys)
 sys.setdefaultencoding("utf-8");
 from time import sleep;
 import unittest,random,sys
-import myunit,function
-from loginPage import login
+sys.path.append('./page_obj');
+from models import myunit
+from page_obj.loginPage import login
 print sys.getdefaultencoding()  
 import re;
 
@@ -33,6 +34,7 @@ class loginTest(myunit.MyTest):
 		self.assertEqual(po.user_error_hint(),"请输入用户名");
 
 	def test_login3(self):
+		'''用户名和密码正确登陆'''
 		self.user_login_verify(username="13817130181",password="jT8430251");
 		po = login(self.driver);
 		pattern = re.compile(r'fa');

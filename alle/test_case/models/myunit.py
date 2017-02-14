@@ -1,9 +1,11 @@
 from selenium import webdriver;
 
-from  driver import browser;
-
 import unittest
 import os 
+
+def browser():
+	driver = webdriver.Chrome();
+	return driver;
 
 class MyTest(unittest.TestCase):
 	def setUp(self):
