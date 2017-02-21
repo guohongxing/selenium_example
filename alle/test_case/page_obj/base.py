@@ -1,5 +1,6 @@
 #coding=utf-8;
 
+
 class Page(object):
 	'''
 	页面基础类，用于所有页面的继承
@@ -31,3 +32,7 @@ class Page(object):
 
 	def script(self,src):
 		return self.driver.execute_script(src);
+
+
+
+

@@ -1,9 +1,12 @@
 #coding=utf-8;
-import 	MySQLdb;
+import 	pymysql;
 
-if __name__ == __main__:
-	test = MySQLdb.connect(db="news",host="106.14.30.35",user="root",passwd='dff20660ea',charset='utf-8');
+if __name__ == '__main__':
+	
+	test = pymysql.connect(db="news",host="106.14.30.35",user="root",passwd='dff20660ea',charset='utf8mb4');
  	cur = test.cursor();
-	cur.execute("selete * from config");
+	cur.execute("selete * from user");
+	connect.commit();
  	data = cur.fetchone();
  	print data;
+ 
